@@ -1,0 +1,14 @@
+pip install \
+fastapi \
+uvicorn \
+python-multipart \
+pydantic \
+langchain \
+langchain-community \
+sentence-transformers \
+faiss-cpu \
+pypdf \
+pandas \
+python-dotenv \
+transformers \
+torch

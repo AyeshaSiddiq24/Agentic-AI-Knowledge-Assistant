@@ -1,0 +1,160 @@
+/* =========================
+   Global Theme Variables
+========================= */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+:root {
+  --primary-blue: #1e3a8a;
+  --primary-teal: #0d9488;
+  --accent-teal: #2dd4bf;
+  --bg-light: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --border-soft: #e2e8f0;
+}
+
+/* =========================
+   Base Styles
+========================= */
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+  color: var(--text-dark);
+}
+
+/* =========================
+   App Container
+========================= */
+.app-container {
+  max-width: 900px;
+  margin: 0;
+  padding: 32px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+.page-wrapper {
+  min-height: 100vh;
+  width: 100vw;              /* 👈 THIS fixes horizontal centering */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================
+   Title
+========================= */
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 24px;
+}
+
+.app-title span {
+  color: var(--primary-teal);
+}
+
+/* =========================
+   Sections
+========================= */
+.section {
+  margin-bottom: 28px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* =========================
+   Upload Row
+========================= */
+.upload-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* =========================
+   Textarea
+========================= */
+textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  font-size: 15px;
+  resize: vertical;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+}
+
+/* =========================
+   Buttons
+========================= */
+button {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-teal));
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(13, 148, 136, 0.25);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   Answer Card
+========================= */
+.answer-card {
+  background: #f0fdfa;
+  border-left: 4px solid var(--primary-teal);
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+/* =========================
+   Code Blocks (Evaluation / Trace)
+========================= */
+.code-block {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 14px;
+  border-radius: 10px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
